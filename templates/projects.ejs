@@ -1,0 +1,10 @@
+<% for (var i = 0; i < projects.length; ++i) { %>
+  <div class="project-entry">
+    <a href="#"><%= projects[i].title %></a>
+    <div class="date-text"><%= projects[i].dates %></div>
+    <p><br><%= projects[i].description %></p>
+    <% for (var j = 0; j < projects[i].images.length; ++j) { %>
+      <%= img_tag(projects[i].images[j], "Project Image") %>
+    <% } %>
+  </div>
+<% } %>
