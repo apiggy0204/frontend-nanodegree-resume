@@ -68,12 +68,18 @@ var education = {
   "schools": [
     {
       "name": "National Taiwan University",
-      "location": "Taipei",
+      "location": "Taipei, Taiwan",
       "degree": "MS",
-      "majors": [
-        "CS"
-      ],
+      "major": "Computer Science",
       "dates": "2011 - 2013",
+      "url": "http://www.ntu.edu.tw"
+    },
+    {
+      "name": "National Taiwan University",
+      "location": "Taipei, Taiwan",
+      "degree": "BS",
+      "major": "Electrical Engineering",
+      "dates": "2007 - 2011",
       "url": "http://www.ntu.edu.tw"
     }
   ],
@@ -86,3 +92,6 @@ var education = {
     }
   ]
 };
+
+var educationHtml = new EJS({url: "templates/education.ejs"}).render(education);
+$("#education").append(educationHtml);

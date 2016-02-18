@@ -1,0 +1,8 @@
+<% for (var i = 0; i < schools.length; ++i) { %>
+  <div class="education-entry">
+    <a href="#"><%= schools[i].name %> -- <%= schools[i].degree %></a>
+    <div class="date-text"><%= schools[i].dates %></div>
+    <div class="location-text"><%= schools[i].location %></div>
+      <em><br>Major: <%= schools[i].major %></em>
+  </div>
+<% } %>
