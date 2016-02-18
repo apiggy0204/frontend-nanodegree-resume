@@ -44,20 +44,25 @@ var bio = {
   "name": "Shu-Bo Chao",
   "role": "Front-End Ninja",
   "welcomeMessage": "Hello! I'm a developer who likes to create great websites!",
+  "profilePic": "http://placehold.it/200x200",
   "contacts": {
     "mobile": "",
     "email": "apiggy0204@gmail.com",
     "github": "apiggy0204",
     "twitter": "apiggy0204",
+    "blog": "blog",
     "location": "Taipei"
   },
   "skills": [
-    "Node.js (Express)",
-    "Responsive Web Design (Bootstrap)",
-    "JS Framework (Angular, React)",
-    "Windows/Mac development"
+    "C++",
+    "Node.js",
+    "Responsive Web Design",
+    "Windows/Mac development",
   ]
 };
+
+var bioHtml = new EJS({url: "templates/bio.ejs"}).render(bio);
+$("#header").append(bioHtml);
 
 var education = {
   "schools": [
