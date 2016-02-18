@@ -1,8 +1,8 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-var work = {
-  "jobs": [
+var works = {
+  "works": [
     {
       "title": "Senior Engineer",
       "employer": "Trend Micro Inc.",
@@ -20,18 +20,8 @@ var work = {
   ]
 };
 
-work.jobs.forEach(function(job) {
-  $("#workExperience").append(HTMLworkStart);
-
-  var html = "";
-  html += HTMLworkEmployer.replace("%data%", job.employer);
-  html += HTMLworkTitle.replace("%data%", job.title);
-  html += HTMLworkDates.replace("%data%", job.dates);
-  html += HTMLworkLocation.replace("%data%", job.location);
-  html += HTMLworkDescription.replace("%data%", job.description);
-
-  $(".work-entry:last").append(html);
-});
+var workHtml = new EJS({url: "templates/works.ejs"}).render(works);
+$("#workExperience").append(workHtml);
 
 var projects = {
   "projects": [
@@ -48,7 +38,6 @@ var projects = {
 };
 
 var html = new EJS({url: "templates/projects.ejs"}).render(projects);
-console.log(html);
 $("#projects").append(html);
 
 var bio = {

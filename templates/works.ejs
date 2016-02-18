@@ -1,0 +1,8 @@
+<% for (var i = 0; i < works.length; ++i) { %>
+  <div class="work-entry">
+    <a href="#"><%= works[i].title %> - <%= works[i].employer %></a>
+    <div class="date-text"><%= works[i].dates %></div>
+    <div class="location-text"><%= works[i].location %></div>
+    <p><br><%= works[i].description %></p>
+  </div>
+<% } %>
